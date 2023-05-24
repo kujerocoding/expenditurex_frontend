@@ -1,8 +1,12 @@
 import React from 'react'
+import Form from './Form'
 
 const Income = () => {
   return (
-    <div>Income</div>
+    <div>
+      <p>Income</p>
+      <Form />
+    </div>
   )
 }
 

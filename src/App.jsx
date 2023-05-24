@@ -4,9 +4,14 @@ import Dashboard from './components/Dashboard'
 import Transaction from './components/Transaction'
 import Income from './components/Income'
 import Expense from './components/Expense'
+import { useGlobalContext } from './context/globalContext'
+
 
 
 const App = () => {
+ 
+  const { addIncome } = useGlobalContext()
+
   const [active, setActive] = useState(1)
 
   const displayData = () => {
@@ -24,7 +29,7 @@ const App = () => {
     }
   }
   return (
-    <div className='text-white'>
+    <div className=''>
       <Navigation active={active} setActive={setActive}/>
       <main>
         {displayData()}
