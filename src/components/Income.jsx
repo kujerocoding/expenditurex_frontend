@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Form from './Form'
+import { useGlobalContext } from '../context/globalContext'
+import IncomeItem from './IncomeItem'
+
 
 const Income = () => {
+
+  const {incomes, getIncomes} = useGlobalContext()
+  console.log(incomes)
+  useEffect(() => {
+    getIncomes()
+  },[])
+
   return (
-    <div>
-      <p>Income</p>
+    <div className='flex'>
       <Form />
+      <div>
+        {incomes.map(income => (
+          <IncomeItem key={income._id} {...income}/>
+        ))}
+      </div>
     </div>
   )
 }

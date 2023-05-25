@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../context/globalContext'
 
 
 const Form = () => {
 
-    const { addIncome } = useGlobalContext()
+    const { addIncome, getIncomes } = useGlobalContext()
 
     const [inputState, setInputState] = useState({
         title: '',
@@ -24,6 +25,7 @@ const Form = () => {
     const handleSubmit = e => {
         e.preventDefault()
         addIncome(inputState)
+        getIncomes()
     }
 
   return (
@@ -48,7 +50,6 @@ const Form = () => {
         </div>
         <div>
             <DatePicker
-            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' 
             id='date'
             placeholderText='Enter A Date'
             selected={date}
