@@ -6,7 +6,7 @@ import { useGlobalContext } from '../context/globalContext'
 
 const IncomeForm = () => {
 
-    const { addIncome, getIncomes } = useGlobalContext()
+    const { addIncome, getIncomes, error, setError } = useGlobalContext()
 
     const [inputState, setInputState] = useState({
         title: '',
@@ -20,6 +20,7 @@ const IncomeForm = () => {
 
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})
+        setError(null)
     }
 
     const handleSubmit = e => {
@@ -36,7 +37,8 @@ const IncomeForm = () => {
     }
 
   return (
-    <div >
+    <div>
+        {error && <p>{error}</p>}
         <div>
             <input 
             type="text"

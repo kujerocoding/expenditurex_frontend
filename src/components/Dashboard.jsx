@@ -26,7 +26,7 @@ const Dashboard = () => {
             <div key={_id}
             className={`flex gap-4 ${type === 'income' ? 'text-green-500' : 'text-red-500'}`}
             >
-              <p >{title}</p>
+              <p>{title}</p>
               <p>{type === 'income' ? `+ ${amount}` : `- ${amount}` }</p>
             </div>
           )

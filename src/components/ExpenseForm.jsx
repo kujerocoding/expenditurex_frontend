@@ -6,7 +6,7 @@ import { useGlobalContext } from '../context/globalContext'
 
 const ExpenseForm = () => {
 
-    const { addExpense, getExpenses } = useGlobalContext()
+    const { addExpense, getExpenses, error} = useGlobalContext()
 
     const [inputState, setInputState] = useState({
         title: '',
@@ -37,6 +37,7 @@ const ExpenseForm = () => {
 
   return (
     <div >
+        {error && <p>{error}</p>}
         <div>
             <input 
             type="text"
