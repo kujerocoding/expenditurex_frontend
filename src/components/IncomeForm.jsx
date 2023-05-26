@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../context/globalContext'
 
 
-const Form = () => {
+const IncomeForm = () => {
 
     const { addIncome, getIncomes } = useGlobalContext()
 
@@ -86,4 +86,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default IncomeForm

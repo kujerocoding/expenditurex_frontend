@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Form from './Form'
+import IncomeForm from './IncomeForm'
 import { useGlobalContext } from '../context/globalContext'
 import IncomeItem from './IncomeItem'
 
@@ -14,7 +14,7 @@ const Income = () => {
 
   return (
     <div className='flex'>
-      <Form />
+      <IncomeForm />
       <div>
         {incomes.map(income => (
           <IncomeItem key={income._id} {...income}/>
