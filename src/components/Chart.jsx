@@ -29,7 +29,7 @@ const Chart = () => {
         ]
     }
   return (
-    <div className='w-[500px]'>
+    <div className='w-full h-full'>
         <Line data={data} />
     </div>
   )

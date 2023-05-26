@@ -29,9 +29,9 @@ const App = () => {
     }
   }
   return (
-    <div className=''>
+    <div className='bg-blue-500 md:flex'>
       <Navigation active={active} setActive={setActive}/>
-      <main>
+      <main className='grow'>
         {displayData()}
       </main>
     </div>

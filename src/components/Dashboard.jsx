@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Chart from './Chart'
 import { useGlobalContext } from '../context/globalContext'
+import TotalItem from '../shared/totalItem'
 
 const Dashboard = () => {
   const {incomes, expenses, getIncomes, getExpenses, getTotalIncome, getTotalExpenses, getTotalBalance, transactionHistory} = useGlobalContext()
@@ -11,20 +12,25 @@ const Dashboard = () => {
   },[])
 
   return (
-    <div>
-      <h1>All Transactions</h1>
-      <Chart />
-      <div>
-        <p>Total Income : {getTotalIncome()}</p>
-        <p>Total Expense: {getTotalExpenses()}</p>
-        <p>Total Balance: {getTotalBalance()}</p>
+    <div className='bg-red-200 md:grid grid-cols-2 gap-4 px-4'>
+      <div className='col-span-2'>
+        <h1>Dashboard</h1>
+        <div className='flex gap-4'>
+          <TotalItem itemTitle={'Total Income'} itemTotal={getTotalIncome()}/>
+          <TotalItem itemTitle={'Total Expense'} itemTotal={getTotalExpenses()}/>
+          <TotalItem itemTitle={'Total Balance'} itemTotal={getTotalBalance()}/>
+        </div>
       </div>
-      <div>
+      <div className='row-span-2'>
+        <Chart />
+      </div>
+      <div className=''>
+        <h1 className='text-xl'>Recent Transactions</h1>
         {transactionHistory().map(history => {
           const {_id, type, title, amount} = history
           return (
             <div key={_id}
-            className={`flex gap-4 ${type === 'income' ? 'text-green-500' : 'text-red-500'}`}
+            className={`flex justify-between mt-4 border-2 border-black p-2 rounded-xl capitalize ${type === 'income' ? 'text-green-500' : 'text-red-500'}`}
             >
               <p>{title}</p>
               <p>{type === 'income' ? `+ ${amount}` : `- ${amount}` }</p>
@@ -34,14 +40,26 @@ const Dashboard = () => {
       </div>
       <div>
         <div>
-          <p>Min <span>Income</span> Max</p>
-          <p>{Math.min(...incomes.map(item => item.amount))}</p>
-          <p>{Math.max(...incomes.map(item => item.amount))}</p>
+          <div className='flex items-end justify-between'>
+            <p className='text-sm'>Min</p>
+            <p className='text-xl'>Income</p>
+            <p className='text-sm'>Max</p>
+          </div>
+          <div className='flex justify-between mt-4 border-2 border-black p-2 rounded-xl capitalize'>
+            <p className='text-lg'>{Math.min(...incomes.map(item => item.amount))}</p>
+            <p className='text-lg'>{Math.max(...incomes.map(item => item.amount))}</p>
+          </div>
         </div>
-        <div>
-          <p>Min <span>Expense</span> Max</p>
-          <p>{Math.min(...expenses.map(item => item.amount))}</p>
-          <p>{Math.max(...expenses.map(item => item.amount))}</p>
+        <div className='mt-4'>
+          <div className='flex items-end justify-between'>
+            <p className='text-sm'>Min</p>
+            <p className='text-xl'>Expense</p>
+            <p className='text-sm'>Max</p>
+          </div>
+          <div className='flex justify-between mt-4 border-2 border-black p-2 rounded-xl capitalize'>
+            <p className='text-lg'>{Math.min(...expenses.map(item => item.amount))}</p>
+            <p className='text-lg'>{Math.max(...expenses.map(item => item.amount))}</p>
+          </div>
         </div>
       </div>
     </div>

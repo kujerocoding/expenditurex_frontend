@@ -1,4 +1,4 @@
-import { dashboard, transactions } from "./icons";
+import { dashboard, transactions } from "./Icons";
 
 export const menuItems = [
     {
