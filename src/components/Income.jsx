@@ -6,7 +6,7 @@ import IncomeItem from './IncomeItem'
 
 const Income = () => {
 
-  const {incomes, getIncomes} = useGlobalContext()
+  const {incomes, getIncomes, getTotalIncome} = useGlobalContext()
   console.log(incomes)
   useEffect(() => {
     getIncomes()
@@ -20,6 +20,7 @@ const Income = () => {
           <IncomeItem key={income._id} {...income}/>
         ))}
       </div>
+      <p>Total Income: {getTotalIncome()}</p>
     </div>
   )
 }

@@ -28,12 +28,21 @@ export const GlobalProvider = ({children}) => {
         getIncomes()
     }
 
+    const getTotalIncome = () => {
+        let totalIncome = 0
+        incomes.forEach(income => {
+            totalIncome = totalIncome + income.amount
+        })
+        return totalIncome
+    }
+
     return (
         <GlobalContext.Provider value={{
             addIncome,
             getIncomes,
             incomes,
-            deleteIncome
+            deleteIncome,
+            getTotalIncome
         }}>
             {children}
         </GlobalContext.Provider>
