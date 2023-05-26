@@ -29,7 +29,7 @@ const App = () => {
     }
   }
   return (
-    <div className='bg-blue-500 md:flex'>
+    <div className='md:flex'>
       <Navigation active={active} setActive={setActive}/>
       <main className='grow'>
         {displayData()}

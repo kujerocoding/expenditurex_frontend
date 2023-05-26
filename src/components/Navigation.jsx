@@ -4,7 +4,7 @@ import { menuItems } from '../utils/menuItems'
 
 const Navigation = ({active, setActive}) => {
   return (
-    <div className='bg-yellow-200'>
+    <div className='bg-primary text-text'>
         <div>
             <img src="" alt="" />
         </div>

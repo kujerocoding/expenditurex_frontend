@@ -12,7 +12,7 @@ const Dashboard = () => {
   },[])
 
   return (
-    <div className='bg-red-200 md:grid grid-cols-2 gap-4 px-4'>
+    <div className='md:grid grid-cols-2 gap-4 px-4 text-text'>
       <div className='col-span-2'>
         <h1>Dashboard</h1>
         <div className='flex gap-4'>
@@ -21,16 +21,16 @@ const Dashboard = () => {
           <TotalItem itemTitle={'Total Balance'} itemTotal={getTotalBalance()}/>
         </div>
       </div>
-      <div className='row-span-2'>
+      <div className='col-span-2'>
         <Chart />
       </div>
-      <div className=''>
+      <div className='bg-secondary p-4 rounded-xl'>
         <h1 className='text-xl'>Recent Transactions</h1>
         {transactionHistory().map(history => {
           const {_id, type, title, amount} = history
           return (
             <div key={_id}
-            className={`flex justify-between mt-4 border-2 border-black p-2 rounded-xl capitalize ${type === 'income' ? 'text-green-500' : 'text-red-500'}`}
+            className={`flex justify-between mt-4 border-2 border-accent py-2 px-4 rounded-xl capitalize ${type === 'income' ? 'text-green-500' : 'text-red-500'}`}
             >
               <p>{title}</p>
               <p>{type === 'income' ? `+ ${amount}` : `- ${amount}` }</p>
@@ -38,14 +38,14 @@ const Dashboard = () => {
           )
         })}
       </div>
-      <div>
+      <div className='bg-secondary p-4 rounded-xl'>
         <div>
           <div className='flex items-end justify-between'>
             <p className='text-sm'>Min</p>
             <p className='text-xl'>Income</p>
             <p className='text-sm'>Max</p>
           </div>
-          <div className='flex justify-between mt-4 border-2 border-black p-2 rounded-xl capitalize'>
+          <div className='flex justify-between mt-4 border-2 border-accent py-2 px-4 rounded-xl capitalize'>
             <p className='text-lg'>{Math.min(...incomes.map(item => item.amount))}</p>
             <p className='text-lg'>{Math.max(...incomes.map(item => item.amount))}</p>
           </div>
@@ -56,7 +56,7 @@ const Dashboard = () => {
             <p className='text-xl'>Expense</p>
             <p className='text-sm'>Max</p>
           </div>
-          <div className='flex justify-between mt-4 border-2 border-black p-2 rounded-xl capitalize'>
+          <div className='flex justify-between mt-4 border-2 border-accent py-2 px-4 rounded-xl capitalize'>
             <p className='text-lg'>{Math.min(...expenses.map(item => item.amount))}</p>
             <p className='text-lg'>{Math.max(...expenses.map(item => item.amount))}</p>
           </div>
