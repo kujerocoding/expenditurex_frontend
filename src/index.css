@@ -5,3 +5,7 @@
 body{
     @apply bg-bg;
 }
+
+input, textarea, select{
+    @apply text-text w-full mb-4 p-2 bg-transparent border-2 border-accent rounded-md;
+}

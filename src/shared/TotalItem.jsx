@@ -16,7 +16,7 @@ const TotalItem = ({itemTotal,itemTitle}) => {
     }
 
   return (
-    <div className='w-1/3 flex flex-col items-center justify-center p-4 border-2 border-accent rounded-xl bg-secondary'>
+    <div className='w-1/3 mx-auto flex flex-col items-center justify-center p-4 border-2 border-accent rounded-xl bg-secondary'>
         <p className={style()}>{itemTotal}</p>
         <p className='text-xs'>{itemTitle}</p>
     </div>

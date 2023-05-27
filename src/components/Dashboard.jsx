@@ -14,7 +14,7 @@ const Dashboard = () => {
   return (
     <div className='md:grid grid-cols-2 gap-4 px-4 text-text'>
       <div className='col-span-2'>
-        <h1>Dashboard</h1>
+        <h1 className='py-4 uppercase text-xl'>Dashboard</h1>
         <div className='flex gap-4'>
           <TotalItem itemTitle={'Total Income'} itemTotal={getTotalIncome()}/>
           <TotalItem itemTitle={'Total Expense'} itemTotal={getTotalExpenses()}/>

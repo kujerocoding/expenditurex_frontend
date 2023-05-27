@@ -37,7 +37,7 @@ const IncomeForm = () => {
     }
 
   return (
-    <div>
+    <div className='bg-secondary basis-1/3 rounded-xl p-4'>
         {error && <p>{error}</p>}
         <div>
             <input 
@@ -82,7 +82,9 @@ const IncomeForm = () => {
             ></textarea>
         </div>
         <div>
-            <button onClick={handleSubmit}>Add Income</button>
+            <button onClick={handleSubmit}
+            className='bg-primary px-5 py-2 rounded-full text-text font-bold'
+            >Add Income</button>
         </div>
     </div>
   )

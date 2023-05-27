@@ -34,14 +34,10 @@ const Chart = () => {
     }
 
     const dataDoughnut = {
-        labels: [
-          'Red',
-          'Blue',
-          'Yellow'
-        ],
+        labels: expenses.map(item => item.category),
         datasets: [{
-          label: 'My First Dataset',
-          data: [300, 50, 100],
+          label: 'Amount',
+          data: [...expenses.map(item => item.amount)],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
@@ -53,7 +49,7 @@ const Chart = () => {
 
   return (
     <div className='w-full h-full md:grid md:grid-cols-2 gap-4'>
-        <div className='bg-secondary p-4 rounded-xl'>
+        <div className='bg-secondary p-4 rounded-xl flex items-center justify-center'>
             <div className='w-full md:w-1/2'>
                 <Doughnut options={options} data={dataDoughnut}/>
             </div>
