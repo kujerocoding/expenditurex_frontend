@@ -70,9 +70,14 @@ const ExpenseForm = () => {
         <div>
             <select required value={category} name="category" id="category" onChange={handleInput('category')}>
                 <option value="" disabled>Select Option</option>
-                <option value="salary">Salary</option>
-                <option value="freelancing" >Freelancing</option>
-                <option value="stocks">Stocks</option>
+                <option value="basicClothing">Basic Clothing</option>
+                <option value="education">Education</option>
+                <option value="essentialBills">Essential Bills</option>
+                <option value="food">Food</option>
+                <option value="healthCare">Health Care</option>
+                <option value="mortgage">Mortgage</option>
+                <option value="personalCare">Personal Care</option>
+                <option value="other">Other</option>
             </select>
         </div>
         <div>

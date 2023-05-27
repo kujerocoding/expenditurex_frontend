@@ -38,6 +38,7 @@ const IncomeForm = () => {
 
   return (
     <div className='bg-secondary basis-1/3 rounded-xl p-4'>
+        <p className='text-center pb-4 text-lg'>New Income</p>
         {error && <p>{error}</p>}
         <div>
             <input 
@@ -69,21 +70,27 @@ const IncomeForm = () => {
             />
         </div>
         <div>
-            <select required value={category} name="category" id="category" onChange={handleInput('category')}>
+            <select required value={category} name="category" id="category" onChange={handleInput('category')}
+                className='bg-secondary'
+            >
                 <option value="" disabled>Select Option</option>
-                <option value="salary">Salary</option>
-                <option value="freelancing" >Freelancing</option>
-                <option value="stocks">Stocks</option>
+                <option value="earned">Earned</option>
+                <option value="profit" >Profit</option>
+                <option value="rental">Rental</option>
+                <option value="interest">Interest</option>
+                <option value="capitalGains">Capital Gains</option>
+                <option value="dividend">Dividend</option>
+                <option value="royalty">Royalty</option>
             </select>
         </div>
         <div>
-            <textarea value={description} name="description" id="description" cols="30" rows="10" placeholder='Add a message'
+            <textarea value={description} name="description" id="description" cols="30" rows="5" placeholder='Add a message'
             onChange={handleInput('description')}
             ></textarea>
         </div>
-        <div>
+        <div className='text-center'>
             <button onClick={handleSubmit}
-            className='bg-primary px-5 py-2 rounded-full text-text font-bold'
+            className='bg-primary px-10 py-4 rounded-full text-text font-bold hover:bg-text hover:text-primary'
             >Add Income</button>
         </div>
     </div>

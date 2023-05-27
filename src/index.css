@@ -9,3 +9,7 @@ body{
 input, textarea, select{
     @apply text-text w-full mb-4 p-2 bg-transparent border-2 border-accent rounded-md;
 }
+
+svg{
+    @apply w-full h-full;
+}
