@@ -11,7 +11,7 @@ const Navigation = ({active, setActive}) => {
     const {getTotalBalance} = useGlobalContext()
 
   return (
-    <div className='bg-primary text-text flex flex-col m-4 p-4 rounded-xl gap-5'>
+    <div className='bg-primary text-text flex flex-col my-4 ml-4 p-4 rounded-xl gap-5'>
         <div className='w-32 mx-auto'>
            <img src={Logo} alt="logo" />
         </div>
@@ -23,7 +23,7 @@ const Navigation = ({active, setActive}) => {
                 <h2 className='text-xl uppercase mb-2'>John</h2>
                 <div className='flex gap-2'>
                     <div className='w-5'>{balance}</div>
-                    <p className='text-green-500'>₱{getTotalBalance()}</p>
+                    <p className='text-green-500'>₱{getTotalBalance().toLocaleString()}</p>
                 </div>
             </div>
         </div>

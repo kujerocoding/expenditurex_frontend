@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Chart from './Chart'
 import { useGlobalContext } from '../context/globalContext'
-import TotalItem from '../shared/totalItem'
+import TotalItem from '../shared/TotalItem'
 
 const Dashboard = () => {
   const {incomes, expenses, getIncomes, getExpenses, getTotalIncome, getTotalExpenses, getTotalBalance, transactionHistory} = useGlobalContext()

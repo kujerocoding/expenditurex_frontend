@@ -36,7 +36,8 @@ const ExpenseForm = () => {
     }
 
   return (
-    <div >
+    <div className='bg-secondary basis-1/3 rounded-xl p-4' >
+        <p className='text-center pb-4 text-lg'>New Expense</p>
         {error && <p>{error}</p>}
         <div>
             <input 
@@ -81,12 +82,12 @@ const ExpenseForm = () => {
             </select>
         </div>
         <div>
-            <textarea value={description} name="description" id="description" cols="30" rows="10" placeholder='Add a message'
+            <textarea value={description} name="description" id="description" cols="30" rows="5" placeholder='Add a message'
             onChange={handleInput('description')}
             
             ></textarea>
         </div>
-        <div>
+        <div className='text-center'>
             <button 
             className='bg-primary px-10 py-4 rounded-full text-text font-bold hover:bg-text hover:text-primary'
             onClick={handleSubmit}>Add Expense</button>

@@ -20,7 +20,7 @@ const Expense = () => {
       </div>
       <div className='md:flex gap-4'>
         <ExpenseForm />
-        <div className='basis-2/3 rounded-xl p-4'>
+        <div className='basis-2/3 rounded-xl p-4 max-h-[600px] overflow-y-auto'>
           <p className='py-4 uppercase text-xl text-center'>Expense Transactions</p>
           {expenses.map(expense => (
             <ExpenseItem key={expense._id} {...expense}/>
