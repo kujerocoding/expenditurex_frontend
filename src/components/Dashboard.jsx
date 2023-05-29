@@ -15,13 +15,13 @@ const Dashboard = () => {
     <div className='md:grid grid-cols-2 gap-4 px-4 text-text'>
       <div className='col-span-2'>
         <h1 className='py-4 uppercase text-xl'>Dashboard</h1>
-        <div className='flex gap-4'>
+        <div className='flex flex-wrap md:flex-nowrap gap-4'>
           <TotalItem itemTitle={'Total Income'} itemTotal={getTotalIncome()}/>
           <TotalItem itemTitle={'Total Expense'} itemTotal={getTotalExpenses()}/>
           <TotalItem itemTitle={'Total Balance'} itemTotal={getTotalBalance()}/>
         </div>
       </div>
-      <div className='col-span-2'>
+      <div className='md:col-span-2 py-4'>
         <Chart />
       </div>
       <div className='bg-secondary p-4 rounded-xl'>
@@ -38,7 +38,7 @@ const Dashboard = () => {
           )
         })}
       </div>
-      <div className='bg-secondary p-4 rounded-xl'>
+      <div className='bg-secondary p-4 rounded-xl my-4 md:my-0'>
         <div>
           <div className='flex items-end justify-between'>
             <p className='text-sm'>Min</p>

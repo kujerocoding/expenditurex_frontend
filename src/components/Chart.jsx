@@ -48,13 +48,13 @@ const Chart = () => {
       };
 
   return (
-    <div className='w-full h-full md:grid md:grid-cols-2 gap-4'>
-        <div className='bg-secondary p-4 rounded-xl flex items-center justify-center'>
-            <div className='w-full md:w-1/2'>
-                <Doughnut options={options} data={dataDoughnut}/>
+    <div className='w-full h-full md:grid lg:grid-cols-2 gap-4'>
+        <div className='bg-secondary p-4 rounded-xl flex items-center justify-center '>
+            <div className='w-full md:w-1/2 lg:w-1/2'>
+                <Doughnut options={options} data={dataDoughnut} className='w-full h-full'/>
             </div>
         </div>
-        <div className=' bg-secondary p-4 rounded-xl'>
+        <div className=' bg-secondary p-4 rounded-xl mt-4 md:mt-0'>
             <Bar options={options} data={data} />
         </div>
     </div>

@@ -30,7 +30,7 @@ const TotalItem = ({itemTotal,itemTitle}) => {
     }
 
   return (
-    <div className='w-1/3 mx-auto flex items-center justify-center p-4 border-2 border-accent rounded-xl bg-secondary'>
+    <div className='w-full md:basis-1/3 flex items-center justify-center py-4 border-2 border-accent rounded-xl bg-secondary'>
         <div className='flex gap-4 text-center'>
             <div className='w-12 h-12'>
                 {getIcon()}
