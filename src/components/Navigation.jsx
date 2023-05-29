@@ -32,7 +32,7 @@ const Navigation = ({active, setActive}) => {
                 {menuItems.map(item => (
                     <li 
                     key={item.id} 
-                    className={`flex gap-4 items-center cursor-pointer p-2 rounded-md ${active === item.id ? 'text-primary bg-text font-bold' : ''}`}
+                    className={`flex gap-4 items-center cursor-pointer p-2 rounded-md hover:bg-gray-300 hover:text-primary ${active === item.id ? 'text-primary bg-text font-bold' : ''}`}
                     onClick={() => setActive(item.id)}
                     ><span className='w-8 h-8'>{item.icon}</span>{item.title}</li>
                 ))}

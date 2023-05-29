@@ -12,7 +12,7 @@ const Dashboard = () => {
   },[])
 
   return (
-    <div className='md:grid grid-cols-2 gap-4 px-4 text-text'>
+    <div className='md:grid grid-cols-2 gap-4 px-4 text-text mb-4'>
       <div className='col-span-2'>
         <h1 className='py-4 uppercase text-xl'>Dashboard</h1>
         <div className='flex flex-wrap md:flex-nowrap gap-4'>
@@ -21,7 +21,7 @@ const Dashboard = () => {
           <TotalItem itemTitle={'Total Balance'} itemTotal={getTotalBalance()}/>
         </div>
       </div>
-      <div className='md:col-span-2 py-4'>
+      <div className='md:col-span-2 py-4 md:py-0'>
         <Chart />
       </div>
       <div className='bg-secondary p-4 rounded-xl'>
