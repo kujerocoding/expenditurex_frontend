@@ -36,7 +36,7 @@ const TotalItem = ({itemTotal,itemTitle}) => {
                 {getIcon()}
             </div>
             <div>
-                <p className={style()}>{itemTotal}</p>
+                <p className={style()}>₱ {itemTotal.toLocaleString()}</p>
                 <p className='text-xs'>{itemTitle}</p>
             </div>
         </div>

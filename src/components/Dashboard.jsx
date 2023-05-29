@@ -33,7 +33,7 @@ const Dashboard = () => {
             className={`flex justify-between mt-4 border-2 border-accent py-2 px-4 rounded-xl capitalize ${type === 'income' ? 'text-green-500' : 'text-red-500'}`}
             >
               <p>{title}</p>
-              <p>{type === 'income' ? `+ ${amount}` : `- ${amount}` }</p>
+              <p>{type === 'income' ? `+ ₱ ${amount}` : `- ₱ ${amount}` }</p>
             </div>
           )
         })}
@@ -46,8 +46,8 @@ const Dashboard = () => {
             <p className='text-sm'>Max</p>
           </div>
           <div className='flex justify-between mt-4 border-2 border-accent py-2 px-4 rounded-xl capitalize'>
-            <p className='text-lg'>{Math.min(...incomes.map(item => item.amount))}</p>
-            <p className='text-lg'>{Math.max(...incomes.map(item => item.amount))}</p>
+            <p className='text-lg'>₱ {Math.min(...incomes.map(item => item.amount))}</p>
+            <p className='text-lg'>₱ {Math.max(...incomes.map(item => item.amount))}</p>
           </div>
         </div>
         <div className='mt-4'>
@@ -57,8 +57,8 @@ const Dashboard = () => {
             <p className='text-sm'>Max</p>
           </div>
           <div className='flex justify-between mt-4 border-2 border-accent py-2 px-4 rounded-xl capitalize'>
-            <p className='text-lg'>{Math.min(...expenses.map(item => item.amount))}</p>
-            <p className='text-lg'>{Math.max(...expenses.map(item => item.amount))}</p>
+            <p className='text-lg'>₱ {Math.min(...expenses.map(item => item.amount))}</p>
+            <p className='text-lg'>₱ {Math.max(...expenses.map(item => item.amount))}</p>
           </div>
         </div>
       </div>

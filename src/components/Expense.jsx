@@ -1,26 +1,32 @@
 import React, { useEffect } from 'react'
+import ExpenseForm from './ExpenseForm'
 import { useGlobalContext } from '../context/globalContext'
 import ExpenseItem from './ExpenseItem'
-import ExpenseForm from './ExpenseForm'
+import TotalItem from '../shared/totalItem'
 
 
 const Expense = () => {
 
   const {expenses, getExpenses, getTotalExpenses} = useGlobalContext()
-  console.log('expenses', expenses)
+
   useEffect(() => {
     getExpenses()
   },[])
 
   return (
-    <div className='flex'>
-      <ExpenseForm />
-      <div>
-        {expenses.map(expense => (
-          <ExpenseItem key={expense._id} {...expense}/>
-        ))}
+    <div className='flex flex-col text-text px-4'>
+      <div className='py-4'>
+        <TotalItem itemTitle={'Total Expense'} itemTotal={getTotalExpenses()}/>
       </div>
-      <p>Total Expense: {getTotalExpenses()}</p>
+      <div className='md:flex gap-4'>
+        <ExpenseForm />
+        <div className='basis-2/3 rounded-xl p-4'>
+          <p className='py-4 uppercase text-xl text-center'>Expense Transactions</p>
+          {expenses.map(expense => (
+            <ExpenseItem key={expense._id} {...expense}/>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

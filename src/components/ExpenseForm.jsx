@@ -68,7 +68,7 @@ const ExpenseForm = () => {
             />
         </div>
         <div>
-            <select required value={category} name="category" id="category" onChange={handleInput('category')}>
+            <select required value={category} name="category" id="category" onChange={handleInput('category')} className='bg-secondary'>
                 <option value="" disabled>Select Option</option>
                 <option value="basicClothing">Basic Clothing</option>
                 <option value="education">Education</option>
@@ -83,10 +83,13 @@ const ExpenseForm = () => {
         <div>
             <textarea value={description} name="description" id="description" cols="30" rows="10" placeholder='Add a message'
             onChange={handleInput('description')}
+            
             ></textarea>
         </div>
         <div>
-            <button onClick={handleSubmit}>Add Expense</button>
+            <button 
+            className='bg-primary px-10 py-4 rounded-full text-text font-bold hover:bg-text hover:text-primary'
+            onClick={handleSubmit}>Add Expense</button>
         </div>
     </div>
   )
