@@ -3,10 +3,11 @@ import {GrTransaction} from 'react-icons/gr'
 import {FaHandHoldingUsd, FaStore, FaHome, FaPercentage, FaChartPie, FaCommentsDollar} from 'react-icons/fa'
 import {FiTrendingUp} from 'react-icons/fi'
 import {GiMoneyStack , GiPayMoney, GiTakeMyMoney} from 'react-icons/gi'
+import {MdDashboard} from 'react-icons/md'
 
 
 
-export const dashboard = <BiHomeAlt2 />
+export const dashboard = <MdDashboard />
 export const money = <GiMoneyStack />
 export const expense = <GiPayMoney />
 export const balance = <GiTakeMyMoney />

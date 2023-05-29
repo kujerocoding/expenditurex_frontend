@@ -32,7 +32,7 @@ const IncomeItem = ({_id, amount, category, date, description, title, type, }) =
     <div className='border-2 border-accent mb-4 rounded-xl bg-secondary'>
       <div className='grid grid-cols-5 p-4'>
         <div className='col-span-4 flex gap-4'>
-          <div className='w-16 h-16 bg-text p-4 rounded-full text-primary'>{getIcon()}</div>
+          <div className='w-16 h-16 bg-green-700 p-4 rounded-full text-text'>{getIcon()}</div>
           <div>
             <p className='text-lg capitalize'>{title}</p>
             <p className='text-sm text-gray-500 capitalize'>{category}</p>

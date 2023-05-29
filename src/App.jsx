@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
 import Navigation from './components/Navigation'
 import Dashboard from './components/Dashboard'
-import Transaction from './components/Transaction'
 import Income from './components/Income'
 import Expense from './components/Expense'
-import { useGlobalContext } from './context/globalContext'
 
 
 
 const App = () => {
  
-  const { addIncome } = useGlobalContext()
-
   const [active, setActive] = useState(1)
 
   const displayData = () => {
@@ -19,10 +15,8 @@ const App = () => {
       case 1:
         return <Dashboard />
       case 2:
-        return <Transaction />
-      case 3:
         return <Income />
-      case 4:
+      case 3:
         return <Expense />
       default:
         return <Dashboard />
