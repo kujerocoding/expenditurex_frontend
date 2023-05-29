@@ -83,9 +83,7 @@ const ExpenseForm = () => {
         </div>
         <div>
             <textarea value={description} name="description" id="description" cols="30" rows="5" placeholder='Add a message'
-            onChange={handleInput('description')}
-            
-            ></textarea>
+            onChange={handleInput('description')}></textarea>
         </div>
         <div className='text-center'>
             <button 

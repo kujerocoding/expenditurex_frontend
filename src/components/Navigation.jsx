@@ -11,7 +11,7 @@ const Navigation = ({active, setActive}) => {
     const {getTotalBalance} = useGlobalContext()
 
   return (
-    <div className='bg-primary text-text flex flex-col my-4 ml-4 p-4 rounded-xl gap-5'>
+    <div className='bg-primary text-text flex flex-col m-4 md:mr-0 p-4 rounded-xl gap-5'>
         <div className='w-32 mx-auto'>
            <img src={Logo} alt="logo" />
         </div>
@@ -39,7 +39,7 @@ const Navigation = ({active, setActive}) => {
             </ul>
         </div>
         <div className='self-center'>
-            <button className='self-end'>Sign Out</button>
+            <button className='hover:text-secondary'>Sign Out</button>
         </div>
     </div>
   )

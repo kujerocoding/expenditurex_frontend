@@ -5,7 +5,6 @@ import Income from './components/Income'
 import Expense from './components/Expense'
 
 
-
 const App = () => {
  
   const [active, setActive] = useState(1)

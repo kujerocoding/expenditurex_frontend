@@ -20,7 +20,7 @@ const Income = () => {
       </div>
       <div className='md:flex gap-4'>
         <IncomeForm />
-        <div className='basis-2/3 rounded-xl p-4 max-h-[600px] overflow-y-auto'>
+        <div className='basis-2/3 rounded-xl p-4 md:pt-0 max-h-[600px] overflow-y-auto'>
           <p className='py-4 uppercase text-xl text-center'>Income Transactions</p>
           {incomes.map(income => (
             <IncomeItem key={income._id} {...income}/>

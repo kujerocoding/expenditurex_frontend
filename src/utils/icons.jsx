@@ -1,4 +1,3 @@
-import {BiHomeAlt2} from 'react-icons/bi'
 import {GrTransaction} from 'react-icons/gr'
 import {FaHandHoldingUsd, FaStore, FaHome, FaPercentage, FaChartPie, FaCommentsDollar, FaGraduationCap, FaFileMedical, FaHouseUser, FaReceipt} from 'react-icons/fa'
 import {FiTrendingUp} from 'react-icons/fi'

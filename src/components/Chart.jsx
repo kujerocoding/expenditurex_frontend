@@ -1,13 +1,9 @@
 import React from 'react'
-/* import {Chart as ChartJs, CategoryScale, LinearScale, LineElement, Title, Tooltip, Legend, ArcElement} from 'chart.js' */
-import {Line , Bar, Doughnut} from 'react-chartjs-2'
+import { Bar, Doughnut} from 'react-chartjs-2'
 import { useGlobalContext } from '../context/globalContext'
 import { dateFormat } from '../utils/dateFormat'
 import 'chart.js/auto';
 
-/* ChartJs.register(
-    CategoryScale, LinearScale, LineElement, Title, Tooltip, Legend, ArcElement
-) */
 
 const Chart = () => {
 
@@ -36,7 +32,8 @@ const Chart = () => {
                 display: true,
                 text: 'Income vs Expenses',
                 font: {
-                    size: 16
+                    size: 16,
+                    family: "Secular One, sans-serif"
                 }
               }
         }
@@ -69,7 +66,8 @@ const Chart = () => {
             display: true,
             text: 'Expenses Distribution',
             font: {
-                size: 16
+                size: 16,
+                family: "Secular One, sans-serif"
             }
           }
         }
