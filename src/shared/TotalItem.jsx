@@ -1,5 +1,6 @@
 import React from 'react'
-import { balance, expense, money } from '../utils/Icons'
+import {GiMoneyStack , GiPayMoney, GiTakeMyMoney} from 'react-icons/gi'
+
 
 const TotalItem = ({itemTotal,itemTitle}) => {
 
@@ -19,13 +20,13 @@ const TotalItem = ({itemTotal,itemTitle}) => {
     const getIcon = () => {
         switch(itemTitle){
             case 'Total Income':
-                return money
+                return <GiMoneyStack />
             case 'Total Expense':
-                return expense
+                return  <GiPayMoney />
             case 'Total Balance':
-                return balance
+                return <GiTakeMyMoney />
             default:
-                return money
+                return <GiMoneyStack />
         }
     }
 

@@ -1,7 +1,10 @@
 import React from 'react'
 import { useGlobalContext } from '../context/globalContext'
 import { dateFormat } from '../utils/dateFormat'
-import { basicClothing, education, essentialBills, food, healthCare, mortgage, personalCare, other } from '../utils/Icons'
+import {FaGraduationCap, FaFileMedical, FaHouseUser, FaReceipt} from 'react-icons/fa'
+import {MdFastfood} from 'react-icons/md'
+import {GiClothes, GiNotebook} from 'react-icons/gi'
+import {BsFillClipboard2HeartFill} from 'react-icons/bs'
 
 const ExpenseItem = ({_id, amount, category, date, description, title, type, }) => {
 
@@ -10,21 +13,21 @@ const ExpenseItem = ({_id, amount, category, date, description, title, type, }) 
   const getIcon = () => {
     switch(category){
       case 'basicClothing':
-        return basicClothing
+        return <GiClothes />
       case 'education':
-        return education
+        return <FaGraduationCap />
       case 'essentialBills':
-        return essentialBills
+        return <FaReceipt />
       case 'food':
-        return food
+        return <MdFastfood />
       case 'healthCare':
-        return healthCare
+        return <FaFileMedical />
       case 'mortgage':
-        return mortgage
+        return <FaHouseUser />
       case 'personalCare':
-        return personalCare
+        return <BsFillClipboard2HeartFill />
       default:
-        return other
+        return <GiNotebook />
     }
   }
 

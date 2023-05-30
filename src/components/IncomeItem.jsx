@@ -1,7 +1,8 @@
 import React from 'react'
 import { useGlobalContext } from '../context/globalContext'
 import { dateFormat } from '../utils/dateFormat'
-import { earned, profit, rental, interest, capitalGains, dividend, royalty } from '../utils/Icons'
+import {FaHandHoldingUsd, FaStore, FaHome, FaPercentage, FaChartPie, FaCommentsDollar} from 'react-icons/fa'
+import {FiTrendingUp} from 'react-icons/fi'
 
 const IncomeItem = ({_id, amount, category, date, description, title, type, }) => {
 
@@ -10,21 +11,21 @@ const IncomeItem = ({_id, amount, category, date, description, title, type, }) =
   const getIcon = () => {
     switch(category){
       case 'earned':
-        return earned
+        return <FaHandHoldingUsd />
       case 'profit':
-        return profit
+        return <FaStore />
       case 'rental':
-        return rental
+        return <FaHome />
       case 'interest':
-        return interest
+        return <FaPercentage />
       case 'capitalGains':
-        return capitalGains
+        return <FiTrendingUp />
       case 'dividend':
-        return dividend
+        return <FaChartPie />
       case 'royalty':
-        return royalty
+        return <FaCommentsDollar />
       default:
-        return earned
+        return <FaHandHoldingUsd />
     }
   }
 
