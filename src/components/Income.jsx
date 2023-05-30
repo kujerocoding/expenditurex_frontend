@@ -8,7 +8,6 @@ import TotalItem from '../shared/TotalItem'
 const Income = () => {
 
   const {incomes, getIncomes, getTotalIncome} = useGlobalContext()
-  console.log(incomes)
   useEffect(() => {
     getIncomes()
   },[])

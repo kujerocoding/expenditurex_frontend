@@ -3,11 +3,24 @@ import { menuItems } from '../utils/menuItems'
 import Logo from '../assets/image/logo.png'
 import Avatar from '../assets/image/avatar.png'
 import { useGlobalContext } from '../context/globalContext'
+import {MdDashboard} from 'react-icons/md'
+import {GiMoneyStack, GiPayMoney} from 'react-icons/gi'
 
 
 const Navigation = ({active, setActive}) => {
 
     const {getTotalBalance} = useGlobalContext()
+
+    const getIcon = (icon) => {
+        switch(icon){
+            case 'dashboard':
+                return <MdDashboard />
+            case 'money':
+                return <GiMoneyStack />
+            case 'expense':
+                return <GiPayMoney />
+        }
+    }
 
   return (
     <div className='bg-primary text-text flex flex-col m-4 md:mr-0 p-4 rounded-xl gap-5'>
@@ -33,7 +46,7 @@ const Navigation = ({active, setActive}) => {
                     key={item.id} 
                     className={`flex gap-4 items-center cursor-pointer p-2 rounded-md hover:bg-gray-300 hover:text-primary ${active === item.id ? 'text-primary bg-text font-bold' : ''}`}
                     onClick={() => setActive(item.id)}
-                    ><span className='w-8 h-8'>{item.icon}</span>{item.title}</li>
+                    ><span className='w-8 h-8'>{getIcon(item.icon)}</span>{item.title}</li>
                 ))}
             </ul>
         </div>

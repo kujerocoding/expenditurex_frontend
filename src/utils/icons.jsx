@@ -1,3 +1,4 @@
+import React from 'react'
 import {GrTransaction} from 'react-icons/gr'
 import {FaHandHoldingUsd, FaStore, FaHome, FaPercentage, FaChartPie, FaCommentsDollar, FaGraduationCap, FaFileMedical, FaHouseUser, FaReceipt} from 'react-icons/fa'
 import {FiTrendingUp} from 'react-icons/fi'
@@ -5,7 +6,6 @@ import {GiMoneyStack , GiPayMoney, GiTakeMyMoney} from 'react-icons/gi'
 import {MdDashboard, MdFastfood} from 'react-icons/md'
 import {GiClothes, GiNotebook} from 'react-icons/gi'
 import {BsFillClipboard2HeartFill} from 'react-icons/bs'
-
 
 
 export const dashboard = <MdDashboard />
