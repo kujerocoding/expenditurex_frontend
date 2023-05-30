@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import ExpenseForm from './ExpenseForm'
 import { useGlobalContext } from '../context/globalContext'
 import ExpenseItem from './ExpenseItem'
-import TotalItem from '../shared/totalItem'
+import TotalItem from '../shared/TotalItem'
 
 
 const Expense = () => {
