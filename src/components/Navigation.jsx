@@ -3,7 +3,7 @@ import { menuItems } from '../utils/menuItems'
 import Logo from '../assets/image/logo.png'
 import Avatar from '../assets/image/avatar.png'
 import { useGlobalContext } from '../context/globalContext'
-import { balance } from '../utils/Icons'
+import {balance} from '../../src/utils/Icons'
 
 
 const Navigation = ({active, setActive}) => {
