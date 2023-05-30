@@ -3,7 +3,6 @@ import { menuItems } from '../utils/menuItems'
 import Logo from '../assets/image/logo.png'
 import Avatar from '../assets/image/avatar.png'
 import { useGlobalContext } from '../context/globalContext'
-import {balance} from '../../src/utils/Icons'
 
 
 const Navigation = ({active, setActive}) => {
@@ -22,7 +21,7 @@ const Navigation = ({active, setActive}) => {
             <div>
                 <h2 className='text-xl uppercase mb-2'>John</h2>
                 <div className='flex gap-2'>
-                    <div className='w-5'>{balance}</div>
+                    <p>Balance:</p>
                     <p className='text-green-500'>₱{getTotalBalance().toLocaleString()}</p>
                 </div>
             </div>
